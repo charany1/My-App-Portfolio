@@ -20,51 +20,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        String buttonName ;
+        String[] appList = getResources().getStringArray(R.array.app_names) ;
+        String buttonName;
         switch(v.getId())
         {
             case R.id.first_button:
-                buttonName = "Spotify Streamer";
+                buttonName = appList[0];
                 break;
             case R.id.second_button:
-                buttonName = "Scores App";
+                buttonName = appList[1];
                 break;
             case R.id.third_button:
-                buttonName = "Library App";
+                buttonName = appList[2];
                 break;
             case R.id.fourth_button:
-                buttonName = "Build It Bigger";
+                buttonName = appList[3];
                 break;
             case R.id.fifith_button:
-                buttonName = "XYZ Reader";
+                buttonName = appList[4];
                 break;
             case R.id.sixth_button:
-                buttonName = "Capstone";
+                buttonName = appList[5];
                 break;
             default:
-                buttonName = "No";
+                buttonName = "None";
 
         }
         Toast.makeText(MainActivity.this, "This button will launch my "+buttonName+" app!", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
 
 
-        return super.onOptionsItemSelected(item);
-    }
 }
